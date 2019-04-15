@@ -12,16 +12,11 @@
 */
     Route::resource('category','CategoryController');
 
+    Route::resource('product','ProductController');
+
 Route::get('/', function () {
     return view('home');
 });
-
-
-
-
-
-
-
 
 Auth::routes();
 

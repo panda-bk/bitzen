@@ -62,6 +62,8 @@
 @endif
 
 @yield('adminlte_js')
+<script src="/js/app.js"></script>
+@stack('javascript')
 
 </body>
 </html>
