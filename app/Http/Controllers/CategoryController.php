@@ -62,7 +62,6 @@ class CategoryController extends Controller
 
     public function destroy($id)
     {
-        $this->categoryService->destroy($id);
         $category = $this->category->find($id);
 		try {
 			$category->delete();
