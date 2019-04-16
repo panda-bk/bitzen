@@ -14,10 +14,9 @@
                 <div class="box-header with-border">
                     <div class="row">
                         <div class="form-group col-sm-12 ">
-                            <label class="control-label">Dashboard:</label>
+                            <label class="control-label">Painel:</label>
 
-                             <example-component></example-component>
-
+                             <painel-component></painel-component>
 
                         </div>
                     </div>
