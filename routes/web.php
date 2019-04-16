@@ -24,6 +24,8 @@ Route::middleware(['auth'])->group(function () {
     Route::resource('category','CategoryController');
 
     Route::resource('product','ProductController');
+
+    Route::get('about','AboutController@index');
 });
 
 Auth::routes();
