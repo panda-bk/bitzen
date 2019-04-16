@@ -10,4 +10,4 @@ Sistema desenvolvido para a Vaga de Desenvolvedor PHP.
 
 3 - Apos a inicialização abra o navegador na [http://localhost/](http://localhost:80/).
 
-4 - Login: admin@bitzen.com.br Senha:**bitzen** ou vai em register para se cadastrar no sistema.
+4 - Login: admin@bitzen.com.br Senha:**bitzen** ou click em register para se cadastrar no sistema.
