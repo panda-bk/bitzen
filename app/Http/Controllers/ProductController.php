@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use \App\Product;
 use \App\Category;
+use \App\User;
 use \App\Services\ProductService;
 use App\Http\Requests\ProductRequest;
 
@@ -76,5 +77,17 @@ class ProductController extends Controller
 		} catch (\Exception $e) {
 			return redirect('/product')->with('error', 'Ops! Ocorreu um erro ao remover esse produto');
         }
+    }
+
+    public function getTotal()
+    {
+        $getProductTotal = $this->product->count();
+        $getCategoryTotal = $this->category->count();
+        $getUserTotal = User::count();
+        return response()->json([
+            'product' => $getProductTotal,
+            'category' => $getCategoryTotal,
+            'user' => $getUserTotal
+        ]);
     }
 }
