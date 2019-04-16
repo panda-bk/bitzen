@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use \App\Category;
 use \App\Services\CategoryService;
+use App\Http\Requests\CategoryRequest;
 
 class CategoryController extends Controller
 {
@@ -31,7 +32,7 @@ class CategoryController extends Controller
 
     }
 
-    public function store(Request $request)
+    public function store(CategoryRequest $request)
     {
         $this->categoryService->store($request);
         
@@ -51,7 +52,7 @@ class CategoryController extends Controller
 
     }
 
-    public function update(Request $request, $id)
+    public function update(CategoryRequest $request, $id)
     {
         $this->categoryService->update($request, $id);
 

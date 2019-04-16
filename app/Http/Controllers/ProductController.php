@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use \App\Product;
 use \App\Category;
 use \App\Services\ProductService;
+use App\Http\Requests\ProductRequest;
 
 class ProductController extends Controller
 {
@@ -30,13 +31,15 @@ class ProductController extends Controller
     public function create()
     {
         $categories = $this->category->all();
+        
         return view('product.create', compact('categories'));
 
     }
     
-    public function store(Request $request)
+    public function store(ProductRequest $request)
     {
-        $this->product->store($request);
+
+        $this->productService->store($request);
 
         return redirect('/product');
 
@@ -56,7 +59,7 @@ class ProductController extends Controller
 
     }
 
-    public function update(Request $request, $id)
+    public function update(ProductRequest $request, $id)
     {
         $this->productService->update($request, $id);
 
