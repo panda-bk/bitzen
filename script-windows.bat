@@ -1,4 +1,3 @@
-#!/bin/bash
 echo Iniciando o Docker
 docker-compose up -d
 
